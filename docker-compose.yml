@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  minecraft:
+    build: ./minecraft
+    restart: always
+    environment:
+      EULA: "TRUE"
+    volumes:
+    - ./minecraft/data:/data
+    ports:
+      - "19132:19132/udp"
